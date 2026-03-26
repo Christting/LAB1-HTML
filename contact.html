@@ -13,12 +13,12 @@
 
 	<main>
 		<h3 style="background-color: lemonchiffon; padding: 10px; border: 1px solid gold;">Fill in the form to contact me</h3>
-
+<!--Use <form action="#" method="post"> with proper <fieldset> and <legend> grouping -->
 		<form action="#" method="post">
 			
 			<fieldset style="border: 2px solid navy; padding: 15px; margin-bottom: 20px;">
 				<legend style="font-weight: bold; color: navy;">Personal Information</legend>
-				
+<!--Include these input types: text, email, tel, number, date, range, and textarea -->
 				<p>
 					<label for="fullname">Full Name:</label><br>
 					<input type="text" id="fullname" name="fullname" 
@@ -50,7 +50,7 @@
 
 			<fieldset style="border: 2px solid darkgreen; padding: 15px; margin-bottom: 20px;">
 				<legend style="font-weight: bold; color: darkgreen;">Inquiry Details</legend>
-
+<!--Use <select> with <optgroup> and <option> elements for a 'Subject' dropdown -->
 				<p>
 					<label for="category">Subject (Select with Optgroup):</label><br>
 					<select id="category" name="category" required style="padding: 5px;">
@@ -69,7 +69,7 @@
 					<label for="urgency">Urgency Level (Range):</label><br>
 					Low <input type="range" id="urgency" name="urgency" min="1" max="5"> High
 				</p>
-
+<!--Add at least 3 checkboxes and 3 radio buttons with correct matching name attribute grouping -->
 				<p>Preferred Contact Method:<br>
 					<input type="radio" id="wa" name="contact_method" value="whatsapp" checked>
 					<label for="wa">WhatsApp</label>
