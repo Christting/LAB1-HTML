@@ -10,15 +10,17 @@
 		<h1 style="color: yellow; font-family:verdana ; background-color: midnightblue;">Academic Records</h1>
 		<hr>
 	</header>
-
+<!--Use <table> with <thead>, <tbody> and <tfoot> sections -->
 	<main>
         <section>
             <h2 style="background-color: lemonchiffon;">My University Results</h2>
             <table border="1" cellpadding="10" cellspacing="0">
+<!--Add a <caption> element describing the table content (positioned above the table)-->             
     <caption>Year 2 Sem 1 Academic Results</caption>
 
     <thead>
         <tr>
+<!--Use <th scope="col"> for column headers and <th scope="row"> for row headers -->
             <th scope="col">Year</th>
             <th scope="col">Course Code</th>
             <th scope="col">Subject Name</th>
@@ -66,7 +68,7 @@
             <td>A</td>
         </tr>
     </tbody>
-
+<!--The <tfoot> must contain a summary row showing total credits or average grade using <strong> -->
     <tfoot>
         <tr>
             <th scope="row" colspan="3" style="text-align: center;">Total Credits/Average Grade</th>
