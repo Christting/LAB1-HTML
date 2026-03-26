@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Contact - Christ's Portfolio</title>
+</head>
+<body>
+	<header>
+		<h1 style="color: yellow; font-family: verdana; background-color: midnightblue;">Contact Me</h1>
+		<hr>
+	</header>
+
+	<main>
+		<h3 style="background-color: lemonchiffon; padding: 10px; border: 1px solid gold;">Fill in the form to contact me</h3>
+
+		<form action="#" method="post">
+			
+			<fieldset style="border: 2px solid navy; padding: 15px; margin-bottom: 20px;">
+				<legend style="font-weight: bold; color: navy;">Personal Information</legend>
+				
+				<p>
+					<label for="fullname">Full Name:</label><br>
+					<input type="text" id="fullname" name="fullname" 
+						   style="font-size: 14px; padding: 5px; border: 1px solid navy;" 
+						   placeholder="Your full name" required maxlength="60">
+				</p>
+
+				<p>
+					<label for="useremail">Email Address:</label><br>
+					<input type="email" id="useremail" name="useremail" 
+						   placeholder="example@utm.my" required>
+				</p>
+
+				<p>
+					<label for="phone">Phone Number (Tel):</label><br>
+					<input type="tel" id="phone" name="phone" placeholder="01x-xxxxxxx">
+				</p>
+
+				<p>
+					<label for="age">Age (Number):</label><br>
+					<input type="number" id="age" name="age" min="18" max="99" value="20">
+				</p>
+
+				<p>
+					<label for="bday">Date of Birth (Date):</label><br>
+					<input type="date" id="bday" name="bday">
+				</p>
+			</fieldset>
+
+			<fieldset style="border: 2px solid darkgreen; padding: 15px; margin-bottom: 20px;">
+				<legend style="font-weight: bold; color: darkgreen;">Inquiry Details</legend>
+
+				<p>
+					<label for="category">Subject (Select with Optgroup):</label><br>
+					<select id="category" name="category" required style="padding: 5px;">
+						<optgroup label="Academic">
+							<option value="collaboration">Project Collaboration</option>
+							<option value="dsa">DSA Assignment help</option>
+						</optgroup>
+						<optgroup label="Personal">
+							<option value="dance">FDC Dance Practice</option>
+							<option value="bowling">Bowling Match</option>
+						</optgroup>
+					</select>
+				</p>
+
+				<p>
+					<label for="urgency">Urgency Level (Range):</label><br>
+					Low <input type="range" id="urgency" name="urgency" min="1" max="5"> High
+				</p>
+
+				<p>Preferred Contact Method:<br>
+					<input type="radio" id="wa" name="contact_method" value="whatsapp" checked>
+					<label for="wa">WhatsApp</label>
+					<input type="radio" id="tg" name="contact_method" value="telegram">
+					<label for="tg">Telegram</label>
+					<input type="radio" id="email_opt" name="contact_method" value="email">
+					<label for="email_opt">Email</label>
+				</p>
+
+				<p>Interested in (Checkboxes):<br>
+					<input type="checkbox" id="web" name="interests" value="web">
+					<label for="web">Web Dev</label>
+					<input type="checkbox" id="mobile" name="interests" value="mobile">
+					<label for="mobile">Mobile App</label>
+					<input type="checkbox" id="ui" name="interests" value="ui">
+					<label for="ui">UI/UX Design</label>
+				</p>
+
+				<p>
+					<label for="details">Describe your request (Textarea):</label><br>
+					<textarea id="details" name="details" rows="5" cols="45" 
+							  style="border: 1px solid darkgreen; padding: 8px; font-size: 14px;"
+							  placeholder="Type your message here..." required maxlength="250"></textarea>
+				</p>
+			</fieldset>
+
+			<button type="submit" 
+					style="background-color: midnightblue; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">
+				Submit Contact Form
+			</button>
+		</form>
+	</main>
+
+	<hr>
+	<footer>
+		<address>
+			<p>School: Universiti Teknologi Malaysia, Johor</p>
+			<p>Email: christtingshinling@gmail.com</p>
+		</address>
+		<p><small>&copy; 2026 Christ Ting Shin Ling. All rights reserved.</small></p>
+	</footer>
+</body>
+</html>
