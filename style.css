@@ -277,7 +277,7 @@ button {
 }
 
 /* Component 5: FOOTER */
-/* Box Model Demo 5: Margin pushes footer far below main content, Padding gives it internal space */
+/*  Margin pushes footer far below main content, Padding gives it internal space */
 footer {
     background-color: var(--color-primary); 
     color: var(--color-grey);            
@@ -300,4 +300,39 @@ footer small { color: var(--color-grey); display: block; margin-top: var(--space
 input:focus, textarea:focus, select:focus {
     outline: none;
     box-shadow: 0 0 0 3px var(--color-accent);
+}
+
+/* --- Task 4: Card Grid Layout --- */
+/*turns the .page-cards container into a CSS Grid layou*/
+.page-cards {
+    display: grid;
+    /* Make columns that are at least 260px wide */
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem; 
+    padding: var(--space-lg);
+    align-content: stretch;
+}
+/*Tells this specific card to stretch across 2 columns instead of just 1.*/
+.featured-card {
+    grid-column: span 2; 
+    background-color: var(--color-accent);
+    color: var(--color-white);
+}
+
+.card {
+    transition: transform 0.2s; 
+}
+
+.card:hover {
+    transform: translateY(-4px); 
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15); 
+    /*add shadow effect */
+}
+/*Turns the about page container into a Grid*/
+.about-container  {
+    display: grid;
+    grid-template-columns: 1fr 280px; /* turn into 2 grid */
+    gap: 2rem;
+    padding: var(--space-lg);
+    align-items: start;/*Aligns everything to the top*/
 }
