@@ -246,7 +246,7 @@ nav a.active {/*let user know where they are*/
 /* Landmark: MAIN */
 main {
     background-color: var(--color-surface);
-    color: var(--color-dark-accent); /* 👉 Added color to fulfill Requirement 2 */
+    color: var(--color-dark-accent); /* Added color to fulfill Requirement 2 */
     padding: var(--space-md) 0;
 }
 
@@ -394,4 +394,95 @@ input:focus, textarea:focus, select:focus {
     .about-container {
         grid-template-columns: 1fr 280px;
     }
+}
+
+/* --- Task 6 --- */
+/*Standardizes all form elements*/
+input, textarea, select {
+    width: 100%;
+    padding: 1.2rem;
+    margin-bottom: var(--space-md);
+    border: 0.15rem solid var(--color-grey); 
+    border-radius: 6px;
+    font-family: var(--font-body);
+    font-size: 1.6rem;
+    background-color: var(--color-white);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* focus=clicks, adds a soft "glow" when click */
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 4px rgba(232, 213, 183, 0.4); 
+}
+
+/*submit button shrink slightly, */
+button[type="submit"] {
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--color-secondary);
+}
+
+button[type="submit"]:active {
+    transform: scale(0.97); /*simulating a physical "click" feel*/
+}
+
+
+h2::before {
+    content: "";
+    display: inline-block;
+    width: 0.8rem;
+    height: 2.5rem;
+    background-color: var(--color-accent);
+    margin-right: 1.2rem;
+    vertical-align: middle;
+    border-radius: 2px;
+}
+
+/*decorative opening quotation mark*/
+blockquote::before {
+    content: "“"; 
+    font-family: var(--font-heading);
+    font-size: 5rem;
+    color: var(--color-accent);
+    line-height: 0;
+    margin-right: 0.5rem;
+    vertical-align: -1.8rem;
+}
+
+/* 表格隔行变色 (Zebra Stripes) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: var(--space-md);
+}
+
+tbody tr:nth-child(even) {
+    /* 👈 核心：偶数行变色 */
+    background-color: rgba(232, 213, 183, 0.15); 
+}
+
+/* 列表边框优化：按照老师要求移除第一个的顶边框和最后一个的底边框 */
+.sidebar ul li {
+    border-top: 1px solid var(--color-grey); /* 先给所有 li 加上顶边框 */
+    border-bottom: 1px solid var(--color-grey); /* 先给所有 li 加上底边框 */
+    padding: var(--space-sm) 0;
+}
+
+
+/*remove the border from the very first and very last items in a list*/
+.sidebar ul li:first-child {
+    border-top: none; /* 移除第一个项目的顶边框 */
+}
+
+.sidebar ul li:last-child {
+    border-bottom: none; /* 移除最后一个项目的底边框 */
+}
+
+/* adjust nav */
+nav ul li:last-child {
+    margin-right: 0;
 }

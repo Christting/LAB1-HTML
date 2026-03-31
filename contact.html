@@ -30,11 +30,11 @@
 
 	<main>
 		<section>
-		<h3>Fill in the form to contact me</h3><div class="card">
+		<h3>Fill in the form to contact me</h3>
 <!--Use <form action="#" method="post"> with proper <fieldset> and <legend> grouping -->
 		<form action="#" method="post">
 			
-			<fieldset>
+			<fieldset class="card">
 				<legend>Personal Information</legend>
 <!--Include these input types: text, email, tel, number, date, range, and textarea -->
 				<p>
@@ -65,9 +65,10 @@
 				</p>
 			</fieldset>
 </section>
+
 <section>
-			<fieldset>
-				<legend>Inquiry Details</legend><div class="card">
+<fieldset class="card">
+				<legend>Inquiry Details</legend>
 <!--Use <select> with <optgroup> and <option> elements for a 'Subject' dropdown -->
 				<p>
 					<label for="category">Subject (Select with Optgroup):</label><br>
@@ -111,6 +112,7 @@
 					<textarea id="details" name="details" rows="5" cols="45" 
 							  placeholder="Type your message here..." required maxlength="250"></textarea>
 				</p>
+			</fieldset>
 			</fieldset>
 </section>
 			<button type="submit">
