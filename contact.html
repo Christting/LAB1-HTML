@@ -4,25 +4,37 @@
 <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Contact - Christ's Portfolio</title>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
 	<header>
-		<h1 style="color: yellow; font-family: verdana; background-color: midnightblue;">Contact Me</h1>
-		<hr>
+		<h1>Contact Me</h1>
+		
 	</header>
 
+<nav>
+        <ul>
+        	<li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="academic.html">Academic</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="projects.html">Project</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+    </nav>
+
 	<main>
-		<h3 style="background-color: lemonchiffon; padding: 10px; border: 1px solid gold;">Fill in the form to contact me</h3>
+		<section>
+		<h3>Fill in the form to contact me</h3>
 <!--Use <form action="#" method="post"> with proper <fieldset> and <legend> grouping -->
 		<form action="#" method="post">
 			
-			<fieldset style="border: 2px solid navy; padding: 15px; margin-bottom: 20px;">
-				<legend style="font-weight: bold; color: navy;">Personal Information</legend>
+			<fieldset>
+				<legend>Personal Information</legend>
 <!--Include these input types: text, email, tel, number, date, range, and textarea -->
 				<p>
 					<label for="fullname">Full Name:</label><br>
 					<input type="text" id="fullname" name="fullname" 
-						   style="font-size: 14px; padding: 5px; border: 1px solid navy;" 
 						   placeholder="Your full name" required maxlength="60">
 				</p>
 
@@ -47,13 +59,14 @@
 					<input type="date" id="bday" name="bday">
 				</p>
 			</fieldset>
-
-			<fieldset style="border: 2px solid darkgreen; padding: 15px; margin-bottom: 20px;">
-				<legend style="font-weight: bold; color: darkgreen;">Inquiry Details</legend>
+</section>
+<section>
+			<fieldset>
+				<legend>Inquiry Details</legend>
 <!--Use <select> with <optgroup> and <option> elements for a 'Subject' dropdown -->
 				<p>
 					<label for="category">Subject (Select with Optgroup):</label><br>
-					<select id="category" name="category" required style="padding: 5px;">
+					<select id="category" name="category" required>
 						<optgroup label="Academic">
 							<option value="collaboration">Project Collaboration</option>
 							<option value="dsa">DSA Assignment help</option>
@@ -91,23 +104,22 @@
 				<p>
 					<label for="details">Describe your request (Textarea):</label><br>
 					<textarea id="details" name="details" rows="5" cols="45" 
-							  style="border: 1px solid darkgreen; padding: 8px; font-size: 14px;"
 							  placeholder="Type your message here..." required maxlength="250"></textarea>
 				</p>
 			</fieldset>
-
-			<button type="submit" 
-					style="background-color: midnightblue; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">
+</section>
+			<button type="submit">
 				Submit Contact Form
 			</button>
 		</form>
 	</main>
 
-	<hr>
+	
 	<footer>
 		<address>
 			<p>School: Universiti Teknologi Malaysia, Johor</p>
 			<p>Email: christtingshinling@gmail.com</p>
+			<p>Phone: +60198285101</p>
 		</address>
 		<p><small>&copy; 2026 Christ Ting Shin Ling. All rights reserved.</small></p>
 	</footer>

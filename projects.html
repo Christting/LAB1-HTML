@@ -4,39 +4,53 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Projects - Christ's Portfolio</title>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
 	<header>
-		<h1 style="color: yellow; font-family: verdana; background-color: midnightblue;">My Projects</h1>
+		<h1>My Projects</h1>
 	</header>
-<hr>
+<nav>
+        <ul>
+        	<li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="academic.html">Academic</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="projects.html">Project</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+    </nav>
 
-<h2 style="background-color: lemonchiffon;">My Profile</h2>
+<main>
+	<section>
+<h2>My Profile</h2>
 <!--Use <figure> and <figcaption> to wrap each image with a descriptive caption -->
 <figure style="text-align: center;">
     <img src="profile.jpg" alt="A professional portrait of Christ Ting Shin Ling" title="Hi, I am Christ ting" width="150" height="200">
 	<figcaption>Figure 1: Christ Ting Shin Ling - Software Engineering Student.</figcaption>
 </figure>
 
-<h3 style="background-color: lemonchiffon;">My Latest Project</h3>
+<h3>My Latest Project</h3>
 
 <!--Use the align attribute (deprecated — note this in an HTML comment) to float one image beside a 
 paragraph of text -->
 <figure>
 	<a href="https://github.com/jiahui-1101/borneo_hackwknd" target="_blank">
-        <img src="recent_project.png" alt="User interface of the MHuat mobile app" title="My recent project: MHuat" width="150" height="350" align="left" style="margin-right: 15px;">
+        <img src="recent_project.png" alt="User interface of the MHuat mobile app" title="My recent project: MHuat" width="150" height="350" align="left">
     </a>
     
     <p>It is a cross-platform application developed for a hackathon. I built this app using Flutter and Firebase to provide a sleek, efficient user experience.</p>
     
     <p><a href="https://github.com/jiahui-1101/borneo_hackwknd" target="_blank">View project on GitHub</a></p>
-    
+   <br clear="all">
 	<figcaption>Figure 2: Click the screenshot or the link above to view my MHuat project on GitHub.</figcaption>
 </figure>
 
-<br clear="all">
 
-<hr>
+</section>
+</main>
+
+
 <footer>
 		<address>
 			<p>School: Universiti Teknologi Malaysia, Johor</p>

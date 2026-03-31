@@ -4,13 +4,24 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Skills-Christ's Portfolio</title>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
 	<header>
-	<h1 style="color: yellow; font-family:verdana ; background-color: midnightblue;">My Skills & Technologies</h1>
-	<hr>
+	<h1>My Skills & Technologies</h1>
+	
 	</header>
-	<h3 style="background-color: lemonchiffon;">Section:</h3>
+	<nav>
+        <ul>
+        	<li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="academic.html">Academic</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="projects.html">Project</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+    </nav>
+	<h3>Section:</h3>
 	<!--Create the <nav> using a <ul> of anchor links (<a href="#section-id">) that jump to named sections 
 on the same page -->
 	<nav>
@@ -20,13 +31,13 @@ on the same page -->
              <li><a href="#glossary">Glossary</a></li>
         </ul>
 	</nav>
-<hr>
+
 <main>
 	<!--Build a 'Top Skills' section using an <ol> with the type attribute set to Roman numerals (type="I") 
 and a custom start value-->
 <!--Use the reversed attribute on one ordered list to count down -->
 	<section id="top-skills">
-		<h2 style="background-color: lemonchiffon;">My Top Skills</h2>
+		<h2>My Top Skills</h2>
 <ol type="I" start="5" reversed>
 	<li>Problem Solving</li>
 	<li>Analyze problem</li>
@@ -35,10 +46,10 @@ and a custom start value-->
 	<li>chating</li>
 </ol>
 	</section>
-	<hr>
+	
 <!--create a 'Technologies I Use' <ul> with a nested <ul> inside at least one list item-->
 	<section id="technologies">
-		<h2 style="background-color: lemonchiffon;">Technologies I Use</h2>
+		<h2>Technologies I Use</h2>
 <ul>
 	<li>Programming Language
 		<ul>
@@ -61,10 +72,10 @@ and a custom start value-->
 	</li>
 </ul>
 	</section>
-	<hr>
+	
 <!--Build a 'Glossary' using a <dl> with at least 4 <dt>/<dd> pairs explaining web development terms-->
 	<section id="glossary">
-            <h2 style="background-color: lemonchiffon;">Web Development Glossary</h2>
+            <h2>Web Development Glossary</h2>
             <dl>
                 <dt>HTML</dt>
                 <dd>The standard markup language for creating web pages.</dd>
@@ -80,7 +91,7 @@ and a custom start value-->
             </dl>
         </section>
 </main>
-<hr>
+
 <footer>
 		<address>
 			<p>School: Universiti Teknologi Malaysia, Johor</p>

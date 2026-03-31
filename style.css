@@ -1,0 +1,47 @@
+/* 1. Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@700;900&display=swap');
+
+/* 2. Design Token System (At least 12 variables) */
+:root {
+    /* 2 Primary Colors */
+    --color-primary: #1a1a2e;    
+    --color-secondary: #16213e;  
+
+    /* 2 Accent Colors */
+    --color-accent: #e8d5b7;   
+    --color-dark-accent: #1a1a1a; 
+
+    /* 3 Neutral Surfaces/Greys */
+    --color-white: #FFFFFF;      
+    --color-surface: #f5f4f0;    
+    --color-grey: #cccccc;       
+
+    /* 2 Font Families */
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Lora', Georgia, serif;
+
+    /* 3 Spacing Values */
+    --space-sm: 0.8rem;  
+    --space-md: 1.6rem;  
+    --space-lg: 3.2rem;  
+}
+
+/* 3. CSS Reset Block  */
+html {
+    font-size: 62.5%; /* This makes 1rem equal to exactly 10px */
+}
+/* ‘*’ (Universal Selector）: Selects absolutely every element on the webpage.*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0; /* Removing default body margin */
+    padding: 0; /* Removing default body padding */
+    font-family: var(--font-body);
+    font-size: 1.6rem; 
+    background-color: var(--color-surface);
+}
+
