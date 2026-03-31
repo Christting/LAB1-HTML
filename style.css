@@ -1,7 +1,14 @@
 /* 1. Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@700;900&display=swap');
 
+/* ============================================
+ BREAKPOINTS
+ mobile-first base: 320px and up (default)
+ tablet: @media (min-width: 600px)
+ desktop: @media (min-width: 1024px)
+ ============================================ */
 /* 2. Design Token System (At least 12 variables) */
+
 :root {
     /* 2 Primary Colors */
     --color-primary: #1a1a2e;    
@@ -37,6 +44,12 @@ html {
     padding: 0;
 }
 
+/* 让所有图片具备响应性 */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
 body {
     margin: 0; /* Removing default body margin */
     padding: 0; /* Removing default body padding */
@@ -45,7 +58,13 @@ body {
     background-color: var(--color-surface);
 }
 
+.profile-figure {
+    text-align: center;
+}
 
+.profile-figure img {
+    margin: 0 auto; 
+}
 
 /* =========================================
                     TASK 2
@@ -131,7 +150,7 @@ header {
     color: var(--color-white); 
     padding: 1rem 10% 1rem 2%;         
     display: flex;
-    flex-direction: row; /* ensure layout is in row */
+    flex-direction: column; /* ensure layout is in column(pre is in row) */
    justify-content: space-between;/*push the logo to the left and links to the right.*/
    align-items: center;
    padding: 1.5rem 15% 1.5rem 2%;
@@ -180,6 +199,7 @@ nav {
 nav ul {
     list-style: none;   
     display: flex;/* let layout shown in row */
+    flex-direction: column;
     flex-wrap: wrap;  /* allow page stack vertically on small screen */
     gap: 1.5rem; 
     list-style: none;
@@ -314,7 +334,7 @@ input:focus, textarea:focus, select:focus {
 }
 /*Tells this specific card to stretch across 2 columns instead of just 1.*/
 .featured-card {
-    grid-column: span 2; 
+    grid-column: span 1; /*for span 2 to 1*/
     background-color: var(--color-accent);
     color: var(--color-white);
 }
@@ -331,8 +351,47 @@ input:focus, textarea:focus, select:focus {
 /*Turns the about page container into a Grid*/
 .about-container  {
     display: grid;
-    grid-template-columns: 1fr 280px; /* turn into 2 grid */
+    grid-template-columns: 1fr; /* turn into 1 grid */
     gap: 2rem;
     padding: var(--space-lg);
     align-items: start;/*Aligns everything to the top*/
+}
+
+/* --- TABLET ENHANCEMENTS (平板模式: 600px+) --- */
+@media (min-width: 600px) {
+    /* When the screen is wider than 600px,Header changes back to a 2 row */
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    /* 卡片网格变成 2 列 */
+    .page-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* --- DESKTOP ENHANCEMENTS (电脑模式: 1024px+) --- */
+@media (min-width: 1024px) {
+    /* 导航栏变回水平横向 */
+    nav ul {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    /* 卡片网格变成完美的 3 列 */
+    .page-cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Featured Card 恢复跨两列的效果 */
+    .featured-card {
+        grid-column: span 2;
+    }
+
+    /* 关于页面：激活 1fr 280px 的侧边栏布局 */
+    .about-container {
+        grid-template-columns: 1fr 280px;
+    }
 }
